@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol CitiesDelegate {
-    func getAllCities(item: [Item]?)
+    func getAllCities(item: [City]?)
 }
 
 final class CityViewModel {
@@ -24,7 +24,7 @@ final class CityViewModel {
         networkService?.fetchCities(page: page) { [weak self] (result) in
             switch result {
             case .success(let allCities):
-                guard let items = allCities.items else { return }
+                 let items = allCities.items
                 self?.delegate?.getAllCities(item: items)
             case .failure(let error):
                 print("The error is: \(error.localizedDescription)")

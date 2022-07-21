@@ -10,7 +10,6 @@ import Foundation
 enum AppError: LocalizedError {
     case errorDecoding
     case unknownError
-    case invalidUrl
     case serverError(String)
     
     var errorDescription: String? {
@@ -19,8 +18,6 @@ enum AppError: LocalizedError {
             return "Response could not be decoded"
         case .unknownError:
             return "Error is Unknown"
-        case .invalidUrl:
-            return "Invalid Url"
         case .serverError(let error):
             return error
         }

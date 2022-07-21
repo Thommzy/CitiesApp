@@ -1,32 +1,28 @@
 //
-//  ViewController.swift
+//  CitiesViewController.swift
 //  Square1Cities
 //
 //  Created by Timothy Obeisun on 7/21/22.
 //
 
-import Combine
 import UIKit
 
-class ViewController: UIViewController  {
-    
-    private var subscriptions = Set<AnyCancellable>()
+class CitiesViewController: UIViewController {
     let viewModel = CityViewModel(networkService: NetworkService.shared)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .red
         setupGetAllCities()
     }
     
     func setupGetAllCities() {
         viewModel.fetchCities(page: 0)
-          viewModel.delegate = self
-      }
+        viewModel.delegate = self
+    }
 }
 
-
-extension ViewController: CitiesDelegate {
+extension CitiesViewController: CitiesDelegate {
     func getAllCities(item: [City]?) {
         debugPrint(item, "----->>>>")
     }
