@@ -6,9 +6,15 @@
 //
 
 import Foundation
+import RealmSwift
 
 // MARK: - Cities
 struct Cities: Codable {
     let items: [City]
     let pagination: Pagination
+}
+
+// MARK: - CitiesRealm
+class CitiesRealm: Object {
+    let items = List<CityRealm>()
 }

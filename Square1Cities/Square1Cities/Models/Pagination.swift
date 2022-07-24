@@ -7,15 +7,12 @@
 
 import Foundation
 
-
 // MARK: - Pagination
 struct Pagination: Codable {
-    let currentPage, lastPage, perPage, total: Int
+    let currentPage, lastPage: Int
     
     enum CodingKeys: String, CodingKey {
         case currentPage = "current_page"
         case lastPage = "last_page"
-        case perPage = "per_page"
-        case total
     }
 }

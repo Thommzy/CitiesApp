@@ -5,16 +5,18 @@
 //  Created by Timothy Obeisun on 7/21/22.
 //
 
+import RealmSwift
 import Foundation
 
 // MARK: - Country
 struct Country: Codable {
     let id: Int
-    let name, code: String
-    let continentID: Int
+    let name: String
+    let code: String
     
     enum CodingKeys: String, CodingKey {
-        case id, name, code
-        case continentID = "continent_id"
+        case id
+        case name
+        case code
     }
 }

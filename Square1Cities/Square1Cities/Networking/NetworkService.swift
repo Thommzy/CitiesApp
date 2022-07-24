@@ -4,15 +4,6 @@
 //
 //  Created by Timothy Obeisun on 7/21/22.
 //
-
-import Foundation
-//
-//  NetworkService.swift
-//  TimYummie
-//
-//  Created by Tim on 18/05/2021.
-//
-
 import Foundation
 
 struct NetworkService {
@@ -32,7 +23,6 @@ struct NetworkService {
                                      method: Method,
                                      parameters: [String: Any]? = nil,
                                      completion: @escaping (Result<T, Error>) -> Void) {
-        
         guard let request = createRequest(route: route,
                                           method: method,
                                           parameters: parameters) else {
@@ -44,11 +34,8 @@ struct NetworkService {
             var result: Result<Data, Error>?
             if let data = data {
                 result = .success(data)
-                let responseString = String(data: data, encoding: .utf8) ?? "Could Not Stringify Our Data"
-                print("The response is:\n \(responseString)")
             } else if let error = error {
                 result = .failure(error)
-                print("The error is: \(error.localizedDescription)")
             }
             DispatchQueue.main.async {
                 //MARK:-Decode our result and send back to the user

@@ -7,20 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA8003E92889D53600B705F0 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8003E72889D53600B705F0 /* CitiesViewController.swift */; };
 		FA8003EC2889D60000B705F0 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8003EB2889D60000B705F0 /* City.swift */; };
 		FA8003EE2889D61D00B705F0 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8003ED2889D61D00B705F0 /* Country.swift */; };
 		FA8003F02889D63700B705F0 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8003EF2889D63700B705F0 /* Pagination.swift */; };
+		FA876EF72889F1F20032DE7F /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA876EF52889F1F20032DE7F /* CitiesViewController.swift */; };
+		FA876EF82889F1F20032DE7F /* CitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA876EF62889F1F20032DE7F /* CitiesViewController.xib */; };
+		FA876EFA2889F9C40032DE7F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA876EF92889F9C40032DE7F /* UIView+Extension.swift */; };
+		FA876EFD288A72C70032DE7F /* AppString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA876EFC288A72C70032DE7F /* AppString.swift */; };
+		FA876F01288A744C0032DE7F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA876F00288A744C0032DE7F /* Localizable.strings */; };
 		FA93F1342889658200CCB391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93F1332889658200CCB391 /* AppDelegate.swift */; };
 		FA93F1362889658200CCB391 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93F1352889658200CCB391 /* SceneDelegate.swift */; };
-		FA93F1382889658200CCB391 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93F1372889658200CCB391 /* ViewController.swift */; };
-		FA93F13B2889658200CCB391 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA93F1392889658200CCB391 /* Main.storyboard */; };
 		FA93F13D2889658400CCB391 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA93F13C2889658400CCB391 /* Assets.xcassets */; };
 		FA93F1402889658400CCB391 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA93F13E2889658400CCB391 /* LaunchScreen.storyboard */; };
 		FAC85DA228898B1B003F617E /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC85DA128898B1B003F617E /* ApiResponse.swift */; };
 		FAC85DA528898C65003F617E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC85DA428898C65003F617E /* String+Extension.swift */; };
 		FAC85DA728898EF9003F617E /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC85DA628898EF9003F617E /* Cities.swift */; };
 		FAC85DAC28899C53003F617E /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC85DAB28899C53003F617E /* CityViewModel.swift */; };
+		FAC88C87288C95A3005208A3 /* CityRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC88C86288C95A3005208A3 /* CityRealm.swift */; };
+		FAD0602C288D871B001DD1EB /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FAD0602B288D871B001DD1EB /* Realm */; };
+		FAD0602E288D871B001DD1EB /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FAD0602D288D871B001DD1EB /* RealmSwift */; };
 		FAFF5B18288981F200847DB7 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF5B17288981F200847DB7 /* AppError.swift */; };
 		FAFF5B1A2889823B00847DB7 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF5B192889823B00847DB7 /* Method.swift */; };
 		FAFF5B1C288982C700847DB7 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF5B1B288982C700847DB7 /* Route.swift */; };
@@ -28,15 +33,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FA8003E72889D53600B705F0 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
 		FA8003EB2889D60000B705F0 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		FA8003ED2889D61D00B705F0 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		FA8003EF2889D63700B705F0 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		FA876EF52889F1F20032DE7F /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
+		FA876EF62889F1F20032DE7F /* CitiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitiesViewController.xib; sourceTree = "<group>"; };
+		FA876EF92889F9C40032DE7F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		FA876EFC288A72C70032DE7F /* AppString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppString.swift; sourceTree = "<group>"; };
+		FA876F00288A744C0032DE7F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		FA93F1302889658200CCB391 /* Square1Cities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Square1Cities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA93F1332889658200CCB391 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA93F1352889658200CCB391 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA93F1372889658200CCB391 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FA93F13A2889658200CCB391 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA93F13C2889658400CCB391 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA93F13F2889658400CCB391 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA93F1412889658400CCB391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +51,7 @@
 		FAC85DA428898C65003F617E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		FAC85DA628898EF9003F617E /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
 		FAC85DAB28899C53003F617E /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
+		FAC88C86288C95A3005208A3 /* CityRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityRealm.swift; sourceTree = "<group>"; };
 		FAFF5B17288981F200847DB7 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		FAFF5B192889823B00847DB7 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 		FAFF5B1B288982C700847DB7 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
@@ -55,12 +63,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD0602E288D871B001DD1EB /* RealmSwift in Frameworks */,
+				FAD0602C288D871B001DD1EB /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA876EFB288A72B00032DE7F /* AppConfig */ = {
+			isa = PBXGroup;
+			children = (
+				FA876EFC288A72C70032DE7F /* AppString.swift */,
+			);
+			path = AppConfig;
+			sourceTree = "<group>";
+		};
 		FA93F1272889658200CCB391 = {
 			isa = PBXGroup;
 			children = (
@@ -86,12 +104,13 @@
 				FAC85DA328898C1D003F617E /* Extensions */,
 				FAFF5B162889695B00847DB7 /* CustomViews */,
 				FAFF5B122889691200847DB7 /* Networking */,
+				FA876EFB288A72B00032DE7F /* AppConfig */,
 				FA93F1332889658200CCB391 /* AppDelegate.swift */,
 				FA93F1352889658200CCB391 /* SceneDelegate.swift */,
-				FA93F1372889658200CCB391 /* ViewController.swift */,
 				FA93F13C2889658400CCB391 /* Assets.xcassets */,
 				FA93F13E2889658400CCB391 /* LaunchScreen.storyboard */,
 				FA93F1412889658400CCB391 /* Info.plist */,
+				FA876F00288A744C0032DE7F /* Localizable.strings */,
 			);
 			path = Square1Cities;
 			sourceTree = "<group>";
@@ -100,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC85DA428898C65003F617E /* String+Extension.swift */,
+				FA876EF92889F9C40032DE7F /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -127,8 +147,8 @@
 		FAFF5B132889691E00847DB7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FA8003E72889D53600B705F0 /* CitiesViewController.swift */,
-				FA93F1392889658200CCB391 /* Main.storyboard */,
+				FA876EF52889F1F20032DE7F /* CitiesViewController.swift */,
+				FA876EF62889F1F20032DE7F /* CitiesViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -140,6 +160,7 @@
 				FA8003EB2889D60000B705F0 /* City.swift */,
 				FA8003ED2889D61D00B705F0 /* Country.swift */,
 				FA8003EF2889D63700B705F0 /* Pagination.swift */,
+				FAC88C86288C95A3005208A3 /* CityRealm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,6 +188,10 @@
 			dependencies = (
 			);
 			name = Square1Cities;
+			packageProductDependencies = (
+				FAD0602B288D871B001DD1EB /* Realm */,
+				FAD0602D288D871B001DD1EB /* RealmSwift */,
+			);
 			productName = Square1Cities;
 			productReference = FA93F1302889658200CCB391 /* Square1Cities.app */;
 			productType = "com.apple.product-type.application";
@@ -195,6 +220,9 @@
 				Base,
 			);
 			mainGroup = FA93F1272889658200CCB391;
+			packageReferences = (
+				FAD0602A288D871B001DD1EB /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = FA93F1312889658200CCB391 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -210,8 +238,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA93F1402889658400CCB391 /* LaunchScreen.storyboard in Resources */,
+				FA876F01288A744C0032DE7F /* Localizable.strings in Resources */,
+				FA876EF82889F1F20032DE7F /* CitiesViewController.xib in Resources */,
 				FA93F13D2889658400CCB391 /* Assets.xcassets in Resources */,
-				FA93F13B2889658200CCB391 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,15 +253,17 @@
 			files = (
 				FA8003EE2889D61D00B705F0 /* Country.swift in Sources */,
 				FAFF5B1A2889823B00847DB7 /* Method.swift in Sources */,
+				FA876EFA2889F9C40032DE7F /* UIView+Extension.swift in Sources */,
 				FAFF5B18288981F200847DB7 /* AppError.swift in Sources */,
+				FAC88C87288C95A3005208A3 /* CityRealm.swift in Sources */,
 				FAFF5B202889871B00847DB7 /* NetworkService.swift in Sources */,
-				FA93F1382889658200CCB391 /* ViewController.swift in Sources */,
 				FAFF5B1C288982C700847DB7 /* Route.swift in Sources */,
+				FA876EF72889F1F20032DE7F /* CitiesViewController.swift in Sources */,
+				FA876EFD288A72C70032DE7F /* AppString.swift in Sources */,
 				FAC85DA728898EF9003F617E /* Cities.swift in Sources */,
 				FAC85DA228898B1B003F617E /* ApiResponse.swift in Sources */,
 				FA93F1342889658200CCB391 /* AppDelegate.swift in Sources */,
 				FAC85DAC28899C53003F617E /* CityViewModel.swift in Sources */,
-				FA8003E92889D53600B705F0 /* CitiesViewController.swift in Sources */,
 				FAC85DA528898C65003F617E /* String+Extension.swift in Sources */,
 				FA8003F02889D63700B705F0 /* Pagination.swift in Sources */,
 				FA8003EC2889D60000B705F0 /* City.swift in Sources */,
@@ -243,14 +274,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FA93F1392889658200CCB391 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA93F13A2889658200CCB391 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FA93F13E2889658400CCB391 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -388,7 +411,6 @@
 				INFOPLIST_FILE = Square1Cities/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -416,7 +438,6 @@
 				INFOPLIST_FILE = Square1Cities/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -454,6 +475,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FAD0602A288D871B001DD1EB /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.28.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FAD0602B288D871B001DD1EB /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAD0602A288D871B001DD1EB /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		FAD0602D288D871B001DD1EB /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAD0602A288D871B001DD1EB /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA93F1282889658200CCB391 /* Project object */;
 }

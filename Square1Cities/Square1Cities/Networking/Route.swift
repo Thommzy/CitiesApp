@@ -8,8 +8,8 @@
 import Foundation
 
 enum Route {
-    static let baseUrl  = "http://connect-demo.mobile1.io/square1/connect"
-    static let nameContain = "filter[0][name][contains]"
+    static let baseUrl  = AppString.baseURL.localisedValue
+    static let nameContain = AppString.nameContain.localisedValue
     
     case fetchCities(Int)
     

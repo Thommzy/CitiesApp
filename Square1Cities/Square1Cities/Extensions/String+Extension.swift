@@ -11,5 +11,12 @@ extension String {
     var asUrl: URL? {
         return URL(string: self)
     }
+    
+    func getLocalizedValue() -> String{
+        return NSLocalizedString(
+            self,
+            comment: ""
+        )
+    }
 }
 

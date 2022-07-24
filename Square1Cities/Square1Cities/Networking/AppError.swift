@@ -15,9 +15,9 @@ enum AppError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .errorDecoding:
-            return "Response could not be decoded"
+            return AppString.responseError.localisedValue
         case .unknownError:
-            return "Error is Unknown"
+            return AppString.unknownError.localisedValue
         case .serverError(let error):
             return error
         }

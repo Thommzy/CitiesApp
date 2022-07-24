@@ -6,20 +6,24 @@
 //
 
 import Foundation
+import RealmSwift
 
-// MARK: - City
+
+// MARK: - Pagination
 struct City: Codable {
-    let id: Int
-    let name, localName: String
-    let lat, lng: Double?
+    var id: Int
+    var name: String
     let countryID: Int
-    let country: Country
+    let country: Country?
+    let lat: Double?
+    let lng: Double?
     
     enum CodingKeys: String, CodingKey {
-        case id, name
-        case localName = "local_name"
-        case lat, lng
+        case id
+        case name
         case countryID = "country_id"
         case country
+        case lat
+        case lng
     }
 }

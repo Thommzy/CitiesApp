@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Square1Cities
+
+  Created by Timothy Obeisun on 7/22/22.
+  
+*/
+
+"cityTitle" = "Cities";
+"ChalkboardSEBold" = "ChalkboardSE-Bold";
+"responseError" = "Response could not be decoded";
+"unknownError" = "Error is Unknown";
+"baseURL" = "http://connect-demo.mobile1.io/square1/connect";
+"nameContain" = "filter[0][name][contains]";
+"stringifyError" = "Could Not Stringify Our Data";
