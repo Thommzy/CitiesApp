@@ -5,7 +5,7 @@
 //  Created by Timothy Obeisun on 7/21/22.
 //
 
-import Foundation
+import UIKit
 
 extension String {
     var asUrl: URL? {

@@ -10,12 +10,8 @@ import Combine
 import RealmSwift
 
 protocol CitiesDelegate {
-    func getAllCities(item: [CityRealm])
+    func getAllCities(item: [CityRealm], pageNumber: Int)
     func getError(error: String)
-}
-
-extension CitiesDelegate {
-    func getError(error: String){}
 }
 
 final class CityViewModel {
@@ -30,8 +26,12 @@ final class CityViewModel {
         self.networkService = networkService
     }
     
-    func fetchCities(page: Int) {
-        networkService?.fetchCities(page: page) { [weak self] (result) in
+    func filterCity(text: String,
+                   page: Int,
+                   isSearch: Bool) {
+        networkService?.searchCities(searchParmeter: text,
+                                     page: page,
+                                     completion: { [weak self] (result) in
             switch result {
             case .success(let allCities):
                 let items = allCities.items
@@ -54,12 +54,61 @@ final class CityViewModel {
                     i += 1
                 }
                 
-                try! self?.realm.write {
-                    self?.realm.add(citiesRealm)
+                if isSearch {
+                    self?.deleteDB()
+                    try! self?.realm.write {
+                        self?.realm.add(citiesRealm)
+                    }
+                } else {
+                    try! self?.realm.write {
+                        self?.realm.add(citiesRealm)
+                    }
                 }
                 self?.retreiveData()
             case .failure(let error):
+                self?.retreiveData()
                 self?.delegate?.getError(error: error.localizedDescription)
+            }
+        })
+    }
+    
+    func fetchCities(page: Int) {
+        let dbData = Array(realm.objects(CityRealm.self))
+        if dbData.count > 0 {
+            debugPrint("Call From db alone---->>>>")
+            retreiveData()
+        } else {
+            debugPrint("Call From server alone---->>>")
+            networkService?.fetchCities(page: page) { [weak self] (result) in
+                switch result {
+                case .success(let allCities):
+                    let items = allCities.items
+                    let pagination = allCities.pagination
+                    let citiesRealm = CitiesRealm()
+                    
+                    var i = 0
+                    while i < items.count {
+                        let cityRealm = CityRealm()
+                        cityRealm.id = items[i].id
+                        cityRealm.name = items[i].name
+                        cityRealm.countryID = items[i].countryID
+                        cityRealm.countryName = items[i].country?.name ?? ""
+                        cityRealm.lng = items[i].lng ?? 0.0
+                        cityRealm.lat = items[i].lat ?? 0.0
+                        cityRealm.code = items[i].country?.code ?? ""
+                        cityRealm.currentPage = pagination.currentPage
+                        cityRealm.lastPage = pagination.lastPage
+                        citiesRealm.items.append(cityRealm)
+                        i += 1
+                    }
+                    try! self?.realm.write {
+                        self?.realm.add(citiesRealm)
+                    }
+                    self?.retreiveData()
+                case .failure(let error):
+                    self?.delegate?.getError(error: error.localizedDescription)
+                    self?.retreiveData()
+                }
             }
         }
     }
@@ -71,6 +120,8 @@ final class CityViewModel {
     }
     
     func retreiveData(){
-        self.delegate?.getAllCities(item: Array(realm.objects(CityRealm.self)))
+        let dbData = Array(realm.objects(CityRealm.self))
+        let currentPage = dbData[dbData.count - 1].currentPage
+        self.delegate?.getAllCities(item: dbData, pageNumber: currentPage)
     }
 }

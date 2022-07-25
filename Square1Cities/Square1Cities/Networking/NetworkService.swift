@@ -13,7 +13,16 @@ struct NetworkService {
     
     private init() {}
     
-    func fetchCities(page: Int, completion: @escaping (Result<Cities, Error>) -> Void) {
+    func searchCities(searchParmeter: String,
+                      page: Int,
+                      completion: @escaping (Result<Cities, Error>) -> Void) {
+        request(route: .filterCity(searchParmeter, page),
+                method: .get,
+                completion: completion)
+    }
+    
+    func fetchCities(page: Int,
+                     completion: @escaping (Result<Cities, Error>) -> Void) {
         request(route: .fetchCities(page),
                 method: .get,
                 completion: completion)
