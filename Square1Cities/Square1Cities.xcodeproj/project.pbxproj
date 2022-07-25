@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA08D9F5288E93170058315E /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08D9F4288E93170058315E /* UITableView+Extension.swift */; };
 		FA8003EC2889D60000B705F0 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8003EB2889D60000B705F0 /* City.swift */; };
 		FA8003EE2889D61D00B705F0 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8003ED2889D61D00B705F0 /* Country.swift */; };
 		FA8003F02889D63700B705F0 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8003EF2889D63700B705F0 /* Pagination.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA08D9F4288E93170058315E /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		FA8003EB2889D60000B705F0 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		FA8003ED2889D61D00B705F0 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		FA8003EF2889D63700B705F0 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				FAC85DA428898C65003F617E /* String+Extension.swift */,
 				FA876EF92889F9C40032DE7F /* UIView+Extension.swift */,
 				FAD06034288DD081001DD1EB /* ReuseIdentifying.swift */,
+				FA08D9F4288E93170058315E /* UITableView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				FAFF5B18288981F200847DB7 /* AppError.swift in Sources */,
 				FAD06035288DD081001DD1EB /* ReuseIdentifying.swift in Sources */,
 				FAC88C87288C95A3005208A3 /* CityRealm.swift in Sources */,
+				FA08D9F5288E93170058315E /* UITableView+Extension.swift in Sources */,
 				FAFF5B202889871B00847DB7 /* NetworkService.swift in Sources */,
 				FAFF5B1C288982C700847DB7 /* Route.swift in Sources */,
 				FA876EF72889F1F20032DE7F /* CitiesViewController.swift in Sources */,

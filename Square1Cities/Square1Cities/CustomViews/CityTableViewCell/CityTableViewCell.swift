@@ -18,12 +18,15 @@ class CityTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
+    
     func configure(with model: CityRealm) {
         cityLabel.text = model.name
         countryLabel.text = model.countryName
         latitudeLabel.text = "\(model.lat)"
         longitudeLabel.text = "\(model.lng)"
-        flagLabel.text = flag(country: model.code ?? "")
     }
     
     override func layoutSubviews() {
@@ -47,5 +50,16 @@ extension CityTableViewCell {
             s.unicodeScalars.append(UnicodeScalar(base + v.value)!)
         }
         return String(s)
+    }
+    
+    func countryFlag(countryCode: String) -> String {
+        let flagBase = UnicodeScalar("🇦").value - UnicodeScalar("A").value
+
+        let flag = countryCode
+            .uppercased()
+            .unicodeScalars
+            .compactMap({ UnicodeScalar(flagBase + $0.value)?.description })
+            .joined()
+        return flag
     }
 }

@@ -11,7 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CitiesViewController" customModule="Square1Cities" customModuleProvider="target">
             <connections>
                 <outlet property="cityTableView" destination="yqA-4s-r61" id="zLr-gq-RUL"/>
+                <outlet property="cityTextField" destination="SdG-Q5-X4w" id="eTI-XO-DKu"/>
                 <outlet property="mapParentView" destination="RsP-YB-ov1" id="1lr-F2-E6Q"/>
+                <outlet property="noResultView" destination="Nvf-Jv-svK" id="3b2-tI-RjV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,7 +34,7 @@
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SdG-Q5-X4w">
                                             <rect key="frame" x="10" y="0.0" width="304" height="40"/>
                                             <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
-                                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             <connections>
                                                 <outlet property="delegate" destination="-1" id="Geb-PX-lbn"/>
                                             </connections>
@@ -86,13 +88,13 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jp-hY-kCe">
-                    <rect key="frame" x="20" y="94" width="374" height="768"/>
+                    <rect key="frame" x="20" y="94" width="394" height="768"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CBo-cj-Pz4">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="768"/>
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="768"/>
                             <subviews>
-                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yqA-4s-r61">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="384"/>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yqA-4s-r61">
+                                    <rect key="frame" x="0.0" y="0.0" width="394" height="256"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <connections>
                                         <outlet property="dataSource" destination="-1" id="K7g-ls-tJg"/>
@@ -100,8 +102,25 @@
                                     </connections>
                                 </tableView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RsP-YB-ov1">
-                                    <rect key="frame" x="0.0" y="384" width="374" height="384"/>
+                                    <rect key="frame" x="0.0" y="256" width="394" height="256"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nvf-Jv-svK">
+                                    <rect key="frame" x="0.0" y="512" width="394" height="256"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Result Found, Kindly Search for a City" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfx-xt-IJK">
+                                            <rect key="frame" x="0.0" y="98.5" width="394" height="59.5"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="21"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="nfx-xt-IJK" firstAttribute="leading" secondItem="Nvf-Jv-svK" secondAttribute="leading" id="777-wM-ftJ"/>
+                                        <constraint firstItem="nfx-xt-IJK" firstAttribute="centerY" secondItem="Nvf-Jv-svK" secondAttribute="centerY" id="J7E-LX-TLf"/>
+                                        <constraint firstAttribute="trailing" secondItem="nfx-xt-IJK" secondAttribute="trailing" id="c0a-4B-z89"/>
+                                    </constraints>
                                 </view>
                             </subviews>
                         </stackView>
@@ -119,7 +138,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="bSA-Zz-EH1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Fc9-k9-kRE"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4jp-hY-kCe" secondAttribute="trailing" constant="20" id="G3I-Sz-WcX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4jp-hY-kCe" secondAttribute="trailing" id="G3I-Sz-WcX"/>
                 <constraint firstItem="bSA-Zz-EH1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="IQU-3b-9H9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bSA-Zz-EH1" secondAttribute="trailing" constant="20" id="gHa-1t-W2T"/>
                 <constraint firstItem="4jp-hY-kCe" firstAttribute="top" secondItem="bSA-Zz-EH1" secondAttribute="bottom" constant="10" id="lhg-e6-hwM"/>
