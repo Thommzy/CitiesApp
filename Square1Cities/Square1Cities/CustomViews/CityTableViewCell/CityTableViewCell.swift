@@ -41,25 +41,3 @@ class CityTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 }
-
-extension CityTableViewCell {
-    func flag(country:String) -> String {
-        let base : UInt32 = 127397
-        var s = ""
-        for v in country.unicodeScalars {
-            s.unicodeScalars.append(UnicodeScalar(base + v.value)!)
-        }
-        return String(s)
-    }
-    
-    func countryFlag(countryCode: String) -> String {
-        let flagBase = UnicodeScalar("🇦").value - UnicodeScalar("A").value
-
-        let flag = countryCode
-            .uppercased()
-            .unicodeScalars
-            .compactMap({ UnicodeScalar(flagBase + $0.value)?.description })
-            .joined()
-        return flag
-    }
-}

@@ -1,10 +1,10 @@
 /* 
-  Localizable.strings
-  Square1Cities
-
-  Created by Timothy Obeisun on 7/22/22.
-  
-*/
+ Localizable.strings
+ Square1Cities
+ 
+ Created by Timothy Obeisun on 7/22/22.
+ 
+ */
 
 "cityTitle" = "Cities of the world";
 "ChalkboardSEBold" = "ChalkboardSE-Bold";
@@ -13,3 +13,7 @@
 "baseURL" = "http://connect-demo.mobile1.io/square1/connect";
 "nameContain" = "filter[0][name][contains]";
 "stringifyError" = "Could Not Stringify Our Data";
+"error" = "Error";
+"ok" = "OK";
+"dequeFailed" = "Failed to deque a cell";
+"emptyString" = "";

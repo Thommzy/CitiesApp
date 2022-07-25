@@ -20,4 +20,8 @@ public enum AppString:String {
     case baseURL
     case nameContain
     case stringifyError
+    case error
+    case ok
+    case dequeFailed
+    case emptyString
 }

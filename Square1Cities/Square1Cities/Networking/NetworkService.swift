@@ -13,17 +13,15 @@ struct NetworkService {
     
     private init() {}
     
+    /// searchCities Function makes the request for route filterCity
+    /// - Parameters:
+    ///   - searchParmeter: two Parameters
+    ///   - page: page with type Int
+    ///   - completion: completion Handler.
     func searchCities(searchParmeter: String,
                       page: Int,
                       completion: @escaping (Result<Cities, Error>) -> Void) {
         request(route: .filterCity(searchParmeter, page),
-                method: .get,
-                completion: completion)
-    }
-    
-    func fetchCities(page: Int,
-                     completion: @escaping (Result<Cities, Error>) -> Void) {
-        request(route: .fetchCities(page),
                 method: .get,
                 completion: completion)
     }
@@ -54,6 +52,7 @@ struct NetworkService {
         
     }
     
+    
     private func handleResponse<T: Decodable>(result: Result<Data, Error>?,
                                               completion: (Result<T, Error>) -> Void) {
         guard let result = result else {
@@ -82,7 +81,7 @@ struct NetworkService {
     /// - Parameters:
     ///   - route: The Path to the resource in the back end
     ///   - method: Type of request to be made
-    ///   - parameters: whatever information need to pass to the back End
+    ///   - parameters: Information need to pass to the back End
     /// - Returns: Url Request
     private func createRequest(route: Route,
                                method: Method,

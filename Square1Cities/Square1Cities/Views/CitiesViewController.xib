@@ -13,6 +13,7 @@
                 <outlet property="cityTableView" destination="yqA-4s-r61" id="zLr-gq-RUL"/>
                 <outlet property="cityTextField" destination="SdG-Q5-X4w" id="eTI-XO-DKu"/>
                 <outlet property="mapParentView" destination="RsP-YB-ov1" id="1lr-F2-E6Q"/>
+                <outlet property="mapView" destination="xst-pe-Gbq" id="2A7-XI-tZP"/>
                 <outlet property="noResultView" destination="Nvf-Jv-svK" id="3b2-tI-RjV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -103,7 +104,28 @@
                                 </tableView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RsP-YB-ov1">
                                     <rect key="frame" x="0.0" y="256" width="394" height="256"/>
+                                    <subviews>
+                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xst-pe-Gbq">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="256"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </mapView>
+                                    </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="xst-pe-Gbq" secondAttribute="bottom" id="7MZ-aI-quy"/>
+                                        <constraint firstItem="xst-pe-Gbq" firstAttribute="top" secondItem="RsP-YB-ov1" secondAttribute="top" id="Cpd-Pj-VAl"/>
+                                        <constraint firstAttribute="trailing" secondItem="xst-pe-Gbq" secondAttribute="trailing" constant="20" id="f8c-n3-qhd"/>
+                                        <constraint firstItem="xst-pe-Gbq" firstAttribute="leading" secondItem="RsP-YB-ov1" secondAttribute="leading" id="h2j-6M-UOM"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nvf-Jv-svK">
                                     <rect key="frame" x="0.0" y="512" width="394" height="256"/>
